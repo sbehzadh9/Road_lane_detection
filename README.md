@@ -15,10 +15,10 @@ You can install the necessary libraries using `pip`:
 pip install opencv-python matplotlib numpy
 ```
 ## Usage
-1. Input Image
+###1. Input Image
 The script assumes that the input image is a road scene stored as road1.jpg in the same directory as the script. Modify the image = mpimg.imread('road1.jpg') line to change the image source if necessary.
 
-2. Tunable Parameters
+###2. Tunable Parameters
 The script has several tunable parameters that you can adjust depending on your image and lane conditions:
 
 Color Thresholds (RGB): Adjust these to filter out bright lane-like pixels.
@@ -29,16 +29,16 @@ Canny Edge Detection: Adjust LOW_T and HIGH_T for more or less sensitivity to ed
 
 Gaussian Blur Kernel Size: GAUSS_KSIZE controls the blurring of the image.
 
-## Hough Transform Parameters:
+Hough Transform Parameters:
 
 RHO, THETA, HOUGH_THRESH: These control the sensitivity and precision of the Hough line detection.
 
 MIN_LINE_LEN, MAX_LINE_GAP: These parameters control the minimum length of detected lines and the maximum gap allowed between line segments.
 
-3. Region of Interest (ROI)
+###3. Region of Interest (ROI)
 The region of interest is defined as a polygon (trapezoid) where lane detection will focus. This is specified by the ROI parameter, where each point is defined as a fraction of the image width and height.
 
-4. Output
+###4. Output
 The script processes the input image by:
 
 Applying a color mask to isolate bright lane-like pixels.
@@ -53,7 +53,7 @@ Overlaying the detected lane lines on the original image.
 
 Displaying debug panels showing intermediate results such as the color mask, edges, and the final lane-detection overlay.
 
-5. Visual Debugging
+###5. Visual Debugging
 The script visualizes the following debug panels:
 
 Original Image + ROI: Shows the original image with the region of interest (ROI) highlighted.
@@ -64,10 +64,10 @@ Masked Edges: Shows the edges detected within the ROI.
 
 Detected Lanes: Shows the final image with detected lane lines overlaid.
 
-Example Output
+### 4. **`output_image.png`**
 The script will display a series of images with different stages of the lane detection process. The final image will overlay the detected lane lines on the original road image.
 
-Code Structure
+###Code Structure
 Tunable Parameters: Located at the top of the script.
 
 Image Preprocessing: Color mask, ROI mask, and Canny edge detection.
